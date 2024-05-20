@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins'sans-serif;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+    background: #1b1b1b;
+}
+    .container{
+        position: relative;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #000;
+    }
+    .container .cloud{
+        position: relative;
+        width: 320px;
+        height: 100px;
+        background: #fff;
+        border-radius: 100px;
+        filter: drop-shadow(8px 8px 0 #000);
+        animation: animateCloud 2s linear infinite;
+    }
+        @keyframes animateCloud{
+            0%{
+                filter: drop-shadow(8px 8px 0 #000) drop-shadow(0 0 0 #fff) brightness(1);
+            }
+            95%{
+                filter: drop-shadow(8px 8px 0 #000) drop-shadow(0 0 50px #777) brightness(10);
+            }
+        }
+        .container .cloud::before{
+            content: '';
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: #484f59;
+            top: -50px;
+            left: 40px;
+            box-shadow: 90px -10px 0 30px #484f59;
+        }
+        .container .cloud::after{
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #484f59;
+            border-radius: 100px;
+        }
+        .container .cloud .drop{
+            position: absolute;
+            top: 0;
+            background: #05a2eb;
+            width: 2px;
+            height: 10px;
+            transform-origin: bottom;
+            animation: animate 2s linear infinite; 
+        }
+        @keyframes animate{
+            0%{
+                transform: translateY(0) scaleY(1);
+            }
+            70%{
+                transform: translateY(360px) scaleY(1);
+            }
+            80%{
+                transform: translateY(360px) scaleY(0.2);
+            }
+            100%{
+                transform: translateY(360px) scaleY(0.2) scaleX(15);
+            }
+        }
