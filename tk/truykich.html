@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>truykich.vn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+    
+    <style>
+        body {
+            background-image: url(./tk.jpg);
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh;
+        }
+    .tieude {
+        width: 500px;
+        background-color: rgb(19, 19, 19);
+        padding: 6px 100px;
+    }
+    .login {
+        background-color: rgb(36, 36, 36);
+       
+    }
+    .login label {
+        color: rgb(255, 204, 0);;
+    }
+    .bang {
+        margin-left: 40px;
+    }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <div class="tieude">
+            <h1 style="color: rgb(255, 204, 0); margin-left: 50px; margin-top: 2px;">ĐĂNG NHẬP</h1>
+        </div>
+        <div class="login">
+            <br>
+            <div class="bang">
+                <label for="#">Tài Khoản </label>
+                <input type="text" style="border: 2px solid rgb(255, 187, 14) ; background-color: black; color: yellow;">
+                <button onclick="login()" style="float: right; margin-right: 50px; margin-top: 3px; padding: 25px 15px; background: rgb(255, 187, 14);">THAM CHIẾN</button>
+                <br><br>
+                <label for="#">Mật Khẩu </label>
+                <input type="text" style="border: 2px solid rgb(255, 187, 14) ; background-color: black; color: yellow;">
+    
+                <br><br>
+                <button onclick="qmk()" style="margin-left: 10px; background: rgb(255, 187, 14); padding: 3px 10px;">Quên Mật Khẩu</button>
+                <button onclick="qmk()" style="margin-left: 5px; padding: 3px 10px; background: rgb(255, 187, 14);">Đăng Kí Nhanh</button>
+                <button onclick="qmk()" style="padding: 3px 25px; margin-left: 5px; background: rgb(255, 187, 14);">Nạp Thẻ</button>
+                <br><br>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script>
+function login() {
+    Swal.fire({
+  icon: 'error',
+  title: '',
+  text: 'Tài Khoản của bạn bị cấm Vĩnh viễn ! vì bạn đã dùng phần phầm thứ 3 ! tài khoản sẽ bị xóa khỏi truy kích trong 24H !',
+  
+})
+}
+
+function qmk() {
+    Swal.fire('Hệ Thống Đang Bảo Trì !!')
+}
+</script>
+</html>
